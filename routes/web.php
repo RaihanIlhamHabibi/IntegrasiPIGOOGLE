@@ -11,15 +11,15 @@ Route::get('/', function () {
     if (Auth::check()) {
         return redirect()->route('dashboard');
     }
-
     return view('welcome');
 })->name('home');
 
 Route::middleware('guest')->group(function () {
     Route::get('login', [AuthController::class, 'showLogin'])->name('login');
-    Route::post('login', [AuthController::class, 'login']);
-    Route::get('register', [AuthController::class, 'showRegister'])->name('register');
-    Route::post('register', [AuthController::class, 'register']);
+
+    Route::get('register', function () {
+        return redirect()->route('auth.google');
+    })->name('register');
 });
 
 Route::prefix('auth')->group(function () {
@@ -33,11 +33,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard', function () {
         /** @var \App\Models\User $user */
         $user = Auth::user();
-
         return view('dashboard', [
             'driveCount' => $user->googleDriveFiles()->count(),
             'eventCount' => $user->googleCalendarEvents()->count(),
-            'hasGoogle' => (bool) $user->googleToken,
+            'hasGoogle'  => (bool) $user->googleToken,
         ]);
     })->name('dashboard');
 

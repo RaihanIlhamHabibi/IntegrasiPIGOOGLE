@@ -305,7 +305,7 @@
     {{-- LEFT --}}
     <div class="hero-left">
       <span class="hero-badge">
-        <i class="ti ti-brand-google" style="font-size:13px"></i> Aplikasi BDA
+        <i class="ti ti-brand-google" style="font-size:13px"></i> Aplikasi KORPORA Consultan
       </span>
 
       <h1 class="hero-headline">
@@ -342,7 +342,7 @@
           <span class="dot dot-r"></span>
           <span class="dot dot-y"></span>
           <span class="dot dot-g"></span>
-          <span class="card-header-label">bda-app.local</span>
+          <span class="card-header-label">KORPORA Consultan</span>
         </div>
         <div class="card-body-inner">
           <div class="feat-row">

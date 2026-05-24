@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'BDA System') }}</title>
+        <title>{{ config('app.name', 'KORPORA Consultan') }}</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -157,7 +157,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
                 <a class="navbar-brand" href="{{ route('dashboard') }}">
-                    <i class="bi bi-cloud-upload"></i> BDA System
+                    <i class="bi bi-cloud-upload"></i> KORPORA Consultan
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
@@ -248,7 +248,7 @@
 
         <footer class="bg-dark text-white text-center py-3 mt-5">
             <div class="container">
-                <p class="mb-0">&copy; 2026 BDA System. All rights reserved.</p>
+                <p class="mb-0">&copy; 2026 KORPORA Consultan. All rights reserved.</p>
             </div>
         </footer>
 

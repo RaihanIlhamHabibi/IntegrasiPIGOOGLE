@@ -18,12 +18,7 @@
     position: relative;
     overflow: hidden;
   }
-
-  .bg-shape {
-    position: absolute;
-    border-radius: 50%;
-    pointer-events: none;
-  }
+  .bg-shape { position: absolute; border-radius: 50%; pointer-events: none; }
   .shape-1 {
     width: 500px; height: 500px;
     background: radial-gradient(circle, #e8f1fb 0%, transparent 70%);
@@ -57,8 +52,6 @@
     overflow: hidden;
     animation: fadeUp .5s ease both;
   }
-
-  /* top accent strip */
   .card-strip {
     height: 4px;
     background: linear-gradient(90deg, #185fa5 0%, #639922 50%, #185fa5 100%);
@@ -69,10 +62,8 @@
     0%   { background-position: 200% 0; }
     100% { background-position: -200% 0; }
   }
-
   .card-inner { padding: 2.25rem 2.25rem 2rem; }
 
-  /* logo mark */
   .logo-mark {
     width: 48px; height: 48px;
     border-radius: 14px;
@@ -84,7 +75,6 @@
     color: #185fa5;
     margin-bottom: 1.25rem;
   }
-
   .card-title {
     font-size: 22px;
     font-weight: 700;
@@ -99,74 +89,74 @@
     margin-bottom: 1.75rem;
   }
 
-  /* form */
-  .field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 1rem; }
-  .field label {
+  .feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 1.75rem;
+    padding: 1.25rem;
+    background: #f7f6f3;
+    border-radius: 14px;
+    border: 1px solid #e8e5de;
+  }
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 13px;
-    font-weight: 500;
     color: #555450;
   }
-  .field input {
-    font-family: 'Sora', sans-serif;
+  .feature-icon {
+    width: 28px; height: 28px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 14px;
-    padding: 11px 14px;
-    border-radius: 10px;
-    border: 1px solid #e0ddd7;
-    background: #fafaf8;
-    color: #1a1916;
-    transition: border-color .15s, box-shadow .15s, background .15s;
-    outline: none;
+    flex-shrink: 0;
+  }
+  .fi-blue  { background: #e8f1fb; color: #185fa5; }
+  .fi-green { background: #eaf3de; color: #639922; }
+  .fi-dark  { background: #f0ede8; color: #555450; }
+
+  .btn-google {
+    font-family: 'Sora', sans-serif;
     width: 100%;
-  }
-  .field input:focus {
-    border-color: #185fa5;
+    padding: 13px;
+    border-radius: 100px;
+    border: 1.5px solid #e0ddd7;
     background: #fff;
-    box-shadow: 0 0 0 3px rgba(24,95,165,.1);
-  }
-  .field input.is-invalid {
-    border-color: #e24b4a;
-    background: #fff8f8;
-  }
-  .field input.is-invalid:focus {
-    box-shadow: 0 0 0 3px rgba(226,75,74,.1);
-  }
-  .invalid-msg {
-    font-size: 12px;
-    color: #e24b4a;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-  }
-
-  .field-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    margin-top: .25rem;
-  }
-  .remember-wrap {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 13px;
-    color: #888880;
+    color: #1a1916;
+    font-size: 14px;
+    font-weight: 600;
     cursor: pointer;
-  }
-  .remember-wrap input[type="checkbox"] {
-    width: 15px; height: 15px;
-    accent-color: #185fa5;
-    cursor: pointer;
-  }
-  .link-register {
-    font-size: 13px;
-    color: #185fa5;
+    transition: all .18s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     text-decoration: none;
-    font-weight: 500;
   }
-  .link-register:hover { text-decoration: underline; text-underline-offset: 2px; }
+  .btn-google i { font-size: 18px; color: #185fa5; }
+  .btn-google:hover {
+    background: #f7f6f3;
+    border-color: #185fa5;
+    box-shadow: 0 4px 16px rgba(24,95,165,.12);
+    transform: translateY(-1px);
+    text-decoration: none;
+    color: #1a1916;
+  }
 
-  .btn-submit {
+  .divider-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 1.25rem 0;
+  }
+  .divider-line { flex: 1; height: 1px; background: #e8e5de; }
+  .divider-text { font-size: 12px; color: #c0bdb5; font-weight: 500; }
+
+  .btn-register {
     font-family: 'Sora', sans-serif;
     width: 100%;
     padding: 12px;
@@ -182,39 +172,27 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-  }
-  .btn-submit:hover { background: #333028; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,0,0,.15); }
-  .btn-submit:active { transform: translateY(0); }
-
-  .divider-row {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin: 1.25rem 0;
-  }
-  .divider-line { flex: 1; height: 1px; background: #e8e5de; }
-  .divider-text { font-size: 12px; color: #c0bdb5; font-weight: 500; white-space: nowrap; }
-
-  .btn-google {
-    font-family: 'Sora', sans-serif;
-    width: 100%;
-    padding: 11px;
-    border-radius: 100px;
-    border: 1px solid #e0ddd7;
-    background: #fff;
-    color: #555450;
-    font-size: 13.5px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all .18s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
     text-decoration: none;
   }
-  .btn-google i { font-size: 16px; color: #185fa5; }
-  .btn-google:hover { background: #f7f6f3; border-color: #c0bdb5; color: #1a1916; text-decoration: none; }
+  .btn-register:hover {
+    background: #333028;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(0,0,0,.15);
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .alert-box {
+    border-radius: 10px;
+    padding: 10px 14px;
+    margin-bottom: 1rem;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .alert-error { background:#FCEBEB; border:1px solid #f5c2c2; color:#791F1F; }
+  .alert-success { background:#EAF3DE; border:1px solid #c3e6a0; color:#27500A; }
 
   .card-footer-note {
     text-align: center;
@@ -247,64 +225,52 @@
       </div>
 
       <h1 class="card-title">Selamat datang</h1>
-      <p class="card-sub">Masuk untuk mengakses Google Drive dan Google Calendar kamu.</p>
+      <p class="card-sub">Masuk dengan Google untuk mengakses Drive dan Calendar kamu.</p>
 
-      <form method="POST" action="{{ route('login') }}">
-        @csrf
-
-        <div class="field">
-          <label for="email">Alamat Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value="{{ old('email') }}"
-            placeholder="nama@email.com"
-            class="{{ $errors->has('email') ? 'is-invalid' : '' }}"
-            required
-            autofocus
-          >
-          @error('email')
-            <span class="invalid-msg"><i class="ti ti-alert-circle" style="font-size:13px"></i> {{ $message }}</span>
-          @enderror
+      {{-- Feature highlights --}}
+      <div class="feature-list">
+        <div class="feature-item">
+          <div class="feature-icon fi-blue"><i class="ti ti-brand-google-drive"></i></div>
+          Upload dan kelola file langsung di Google Drive kamu
         </div>
-
-        <div class="field">
-          <label for="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            placeholder="••••••••"
-            class="{{ $errors->has('password') ? 'is-invalid' : '' }}"
-            required
-          >
-          @error('password')
-            <span class="invalid-msg"><i class="ti ti-alert-circle" style="font-size:13px"></i> {{ $message }}</span>
-          @enderror
+        <div class="feature-item">
+          <div class="feature-icon fi-green"><i class="ti ti-calendar-event"></i></div>
+          Buat dan terima event Google Calendar bersama tim
         </div>
-
-        <div class="field-row">
-          <label class="remember-wrap">
-            <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-            Ingat saya
-          </label>
-          <a href="{{ route('register') }}" class="link-register">Belum punya akun?</a>
+        <div class="feature-item">
+          <div class="feature-icon fi-dark"><i class="ti ti-users"></i></div>
+          Semua anggota terdaftar otomatis saling berbagi konten
         </div>
+      </div>
 
-        <button type="submit" class="btn-submit">
-          <i class="ti ti-login" style="font-size:16px"></i> Masuk
-        </button>
-      </form>
+      {{-- Alert --}}
+      @if(session('error'))
+        <div class="alert-box alert-error">
+          <i class="ti ti-alert-circle"></i> {{ session('error') }}
+        </div>
+      @endif
+
+      @if(session('success'))
+        <div class="alert-box alert-success">
+          <i class="ti ti-circle-check"></i> {{ session('success') }}
+        </div>
+      @endif
+
+      {{-- Masuk dengan Google --}}
+      <a href="{{ route('auth.google') }}" class="btn-google">
+        <i class="ti ti-brand-google"></i>
+        Masuk dengan Google
+      </a>
 
       <div class="divider-row">
         <span class="divider-line"></span>
-        <span class="divider-text">atau masuk dengan</span>
+        <span class="divider-text">belum punya akun?</span>
         <span class="divider-line"></span>
       </div>
 
-      <a href="{{ route('auth.google') }}" class="btn-google">
-        <i class="ti ti-brand-google"></i> Lanjutkan dengan Google
+      <a href="{{ route('register') }}" class="btn-register">
+        <i class="ti ti-user-plus" style="font-size:16px"></i>
+        Daftar sekarang
       </a>
 
       <div class="card-footer-note">
